@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/png" href="image.png">
+    <!-- Alternative formats -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>DREAM</title>
+</head>
+<body>
+    <div class="top">
+        <img src="logo.png" alt="logo" width="100" height="100">
+        <h1>DREAM</h1>
+    </div>
+
+    <div class="main">
+        <div class="desc">
+            <p>Welcome to <strong>DREAM</strong>, the ultimate tool for downloading
+                 media from popular platforms like YouTube, TikTok, 
+                 Facebook, and Instagram. Whether you're looking to 
+                 save your favorite videos, audio tracks, or images, 
+                 our easy-to-use platform allows you to quickly 
+                 download high-quality media in various formats. 
+                 Simply paste the URL of the content you wish to 
+                 download, choose your desired format, and enjoy 
+                 your media offline. No sign-up or software installation 
+                 required—just fast, free downloads right from your 
+                 browser. Start downloading today and enjoy your 
+                 favorite content anytime, anywhere!
+            </p>
+            <p>Paste your 
+                <span class="typing-text"></span> 
+                link to Download 
+                <span class="typing-text-2"></span> 
+                with maximum Quality.
+            </p>        
+        </div>
+        <div class="input">
+            <input type="text" id="videoLink" placeholder="Enter YouTube link"><br>
+            <button id="check">Check</button>
+        </div>
+    
+        <div class="error">
+            <p id="error"></p>
+        </div>
+    
+        <div class="quality">
+            <label for="quality" title="quality"></label>
+            <select name="quality" id="quality">
+                <option value="720p">720p</option>
+                <option value="480p">480p</option>
+                <option value="360p">360p</option>
+                <option value="240p">240p</option>
+                <option value="144p">144p</option>
+            </select>
+        </div>
+
+        <div id="result">
+            <h2 id="title">Title:</h2>
+            <p id="description"></p>
+            <br>
+            <div class="video_audio">
+                <div id="video">
+                    <img src="#" alt="thumbnail" id="thumbnail"><br>
+                    <p>
+                        <span id="duration"></span><br>
+                        <span id="size"></span>
+                    </p>
+                </div>
+    
+                <div id="audio">
+                    <audio controls id="audioPlayer">
+                        <source src="" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio><br>
+                </div>
+            </div>
+            <div class="download">
+                <button id="downloadVideo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3V16M12 16L7 11M12 16L17 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 21H19" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Video                    
+                </button>
+                <button id="downloadAudio">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3V16M12 16L7 11M12 16L17 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 21H19" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Audio
+                </button>
+            </div>
+            <div id="image">
+                <img src="" alt="image"><br>
+                <button>Download Image</button>
+            </div>
+        </div>
+
+        <div class="progress">
+            <p id="progress">Progress: Waiting...</p>
+        </div>
+    </div>
+
+    <div class="feedback">
+        <h1>FeedBack:</h1>
+        <form action="">
+            <input type="email" name="" id="" placeholder="Enter your email">
+            <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="Enter your feedback/comment here..."></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>  
+
+    <footer>
+        <p>&copy; 2025 DREAM</p>
+
+    </footer>  
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("videoLink").addEventListener("input", function () {
+            const videoLink = this.value;
+            const checkButton = document.getElementById("check");
+
+            // Improved regex for YouTube, TikTok, Facebook, and Instagram
+            const urlPattern = /^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|shorts\/)|youtu\.be\/|tiktok\.com\/(@[a-zA-Z0-9_.-]+\/video|t\/)|facebook\.com\/(watch\/?|reel\/|share\/v\/?)|fb\.watch\/|instagram\.com\/(p\/|reel\/|tv\/))[\w\-/?=.&%]+$/;
+            if (urlPattern.test(videoLink)) {
+                checkButton.style.opacity = "1"; // Make button visible
+            } else {
+                checkButton.style.opacity = "0.5"; // Dim button if invalid
+            }
+        });
+    </script>
+</body>
+</html>

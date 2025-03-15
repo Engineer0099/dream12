@@ -1,0 +1,388 @@
+body{
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.top{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    h1{
+        font-size: 1.5rem;
+        margin: 0;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .desc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        h1{
+            font-size: 1.5rem;
+            margin: 10px 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        p{
+            font-size: 1rem;
+            margin: 10px 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    }
+    .input{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        width: 100%;   
+        input{
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            opacity: 0.5;
+            transition: 0.3s;
+        }
+
+    }  
+    .error{
+        color: red;
+        font-size: 1rem;
+        margin: 10px 0;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }  
+    .quality{
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    #result{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        border: #333 1px solid;
+        border-radius: 5px;
+        transition: 0,3s;
+        #title{
+            padding: 5px auto;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #description{
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-bottom: #333 1px solid;
+            font-size: 1rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+        #image{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            display: none;
+        }
+        h2{
+            font-size: 1.5rem;
+            margin: 10px 0;
+            padding: 5px auto;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .video_audio{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            #video{
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                img{
+                    width: 80%;
+                    height: 80%;
+                    border-radius: 5px;
+                }
+            }
+            #audio{
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                display: none;
+            }
+        }
+    }
+    .progress{
+        display: none1;
+    }
+}
+.download{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+.download button{
+    flex: 1;           /* Make buttons shrink if necessary */
+    min-width: 100px;  /* Set a minimum width */
+    /* padding: 10px 15px; */
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+.download button:hover {
+    background-color: #333333ba;
+}
+.feedback{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    h1{
+        font-size: 1.5rem;
+        margin: 10px 0;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        border: #333 1px solid;
+        border-radius: 5px;
+        input{
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+        textarea{
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+    }
+}
+footer{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    position: sticky;
+    bottom: 0;
+    z-index: 100;
+    margin-top: 5px;
+    p{
+        font-size: 1rem;
+        margin: 0;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+.typing-text, .typing-text-2 {
+    font-weight: bold;
+    color: #007bff;
+    display: inline-block;
+    white-space: pre; /* Keeps spaces visible */
+}
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media screen and (min-width: 768px){
+    .main{
+        width: 60%;
+        float: left;
+        margin-right: 8rem;
+        .input{
+            input{
+                width: 50%;
+            }
+            button{
+                padding: 10px 20px;
+                border: none;
+                background-color: #333;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1rem;
+                opacity: 0.5;
+                transition: 0.3s;
+            }
+        }
+        #result{
+            width: 50%;
+            #title{
+                padding: 5px auto;
+                text-align: center;
+                font-size: 1.5rem;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            #description{
+                width: 100%;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-bottom: #333 1px solid;
+                font-size: 1rem;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-style: italic;
+            }    
+            #image{
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                display: none;
+            }
+            h2{
+                font-size: 1.5rem;
+                margin: 10px 0;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            button{
+                padding: 10px 20px;
+                border: none;
+                background-color: #333;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1rem;
+                margin-top: 10px;
+            }
+            .video_audio{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                #video{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                    img{
+                        width: 80%;
+                        height: 100%;
+                        border-radius: 5px;
+                    }
+                }
+                    #audio{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                    display: none;
+                }
+            }
+        }
+    }
+.download{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+.download button{
+    flex: 1;           /* Make buttons shrink if necessary */
+    min-width: 100px;  /* Set a minimum width */
+    /* padding: 10px 15px; */
+    font-size: 16px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+.download button:hover {
+    background-color: #333333ba;
+}
+.typing-text, .typing-text-2 {
+    font-weight: bold;
+    color: #007bff;
+    display: inline-block;
+    white-space: pre; /* Keeps spaces visible */
+}
+}
